@@ -44,6 +44,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Check, ChevronsUpDown, PlusCircle, Trash2 } from "lucide-react";
+import { generateJavaCode } from "@/lib/code-generator";
 
 
 const testCaseStepSchema = z.object({
@@ -66,9 +67,10 @@ interface CreateTestCaseDialogProps {
 }
 
 export function CreateTestCaseDialog({ isOpen, setIsOpen, testCase }: CreateTestCaseDialogProps) {
-    const { pages, addTestCase, updateTestCase } = usePages();
+    const { pages, addTestCase, updateTestCase, getPageById, saveTestCaseCode } = usePages();
     const { toast } = useToast();
     const [popoverStates, setPopoverStates] = useState<Record<number, boolean>>({});
+    const [generatedCode, setGeneratedCode] = useState<string | null>(null);
 
     const isEditMode = !!testCase;
 
@@ -129,6 +131,36 @@ export function CreateTestCaseDialog({ isOpen, setIsOpen, testCase }: CreateTest
         setIsOpen(false);
     };
 
+    const handleGenerateJavaCode = () => {
+        const data = form.getValues();
+        if (!data.steps.length || data.steps.some(s => !s.method)) {
+            toast({ variant: "destructive", title: "Select methods first", description: "Add at least one test step and choose its method." });
+            return;
+        }
+        const methodName = (data.name || "generatedTest").replace(/[^a-zA-Z0-9_]+/g, "_");
+        const pageIdsInOrder = Array.from(new Set(data.steps.map(s => s.method.split('::')[0])));
+        const pagesUsed = pageIdsInOrder
+            .map(id => getPageById(id))
+            .filter(Boolean);
+
+        const pageVarMap: Record<string, string> = {};
+        pagesUsed.forEach(p => { pageVarMap[p!.id] = p!.name.replace(/\s+/g, "") + "Page"; });
+
+        const pageCtorLines = pagesUsed.map(p => `        ${p!.name.replace(/\s+/g, "")} ${pageVarMap[p!.id]} = new ${p!.name.replace(/\s+/g, "")}(driver);`).join("\n");
+
+        const callLines = data.steps.map(s => {
+            const [pageId, , methodName] = s.method.split('::');
+            return `        ${pageVarMap[pageId]}.${methodName}();`;
+        }).join("\n");
+
+        const full = `/**\n * Auto-generated test flow for: ${data.name || "Generated Test"}\n */\npublic void ${methodName}(WebDriver driver) {\n${pageCtorLines}\n\n${callLines}\n}`;
+        setGeneratedCode(full);
+        if (testCase) {
+            saveTestCaseCode(testCase.id, full);
+        }
+        toast({ title: "Java code generated", description: "Review the code on the right. You can copy it." });
+    };
+
     useEffect(() => {
         if (isOpen) {
             if (testCase) {
@@ -149,8 +181,8 @@ export function CreateTestCaseDialog({ isOpen, setIsOpen, testCase }: CreateTest
     }, [isOpen, testCase, form]);
 
     return (
-        <Dialog open={isOpen} onOpenChange={setIsOpen}>
-            <DialogContent className="sm:max-w-[625px]">
+        <Dialog open={isOpen} onOpenChange={(open) => { setIsOpen(open); if(!open){ setGeneratedCode(null); } }}>
+            <DialogContent className={cn("sm:max-w-[625px]", (generatedCode || testCase?.generatedCode) && "sm:max-w-[1100px]") }>
                 <DialogHeader>
                     <DialogTitle>{isEditMode ? "Edit Test Case" : "Create New Test Case"}</DialogTitle>
                     <DialogDescription>
@@ -160,8 +192,9 @@ export function CreateTestCaseDialog({ isOpen, setIsOpen, testCase }: CreateTest
                         }
                     </DialogDescription>
                 </DialogHeader>
+                <div className={cn("flex gap-6", generatedCode ? "flex-row" : "flex-col") }>
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className={cn("space-y-6", generatedCode && "flex-1") }>
                         <FormField
                             control={form.control}
                             name="name"
@@ -238,7 +271,8 @@ export function CreateTestCaseDialog({ isOpen, setIsOpen, testCase }: CreateTest
                             </Button>
                         </div>
 
-                        <DialogFooter>
+                        <DialogFooter className="flex justify-between">
+                            <Button type="button" variant="secondary" onClick={handleGenerateJavaCode}>Generate Method</Button>
                             <DialogClose asChild>
                                 <Button type="button" variant="ghost">Cancel</Button>
                             </DialogClose>
@@ -246,6 +280,27 @@ export function CreateTestCaseDialog({ isOpen, setIsOpen, testCase }: CreateTest
                         </DialogFooter>
                     </form>
                 </Form>
+                {(generatedCode || testCase?.generatedCode) && (
+                  <div className="flex-1 min-w-[420px] border rounded-md p-3 bg-muted/30">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-sm font-semibold">Generated Java Code</h3>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        onClick={() => { const code = generatedCode || testCase?.generatedCode || ""; if (code) { navigator.clipboard.writeText(code); toast({ title: "Copied", description: "Java code copied to clipboard."}); } }}
+                      >
+                        Copy Code
+                      </Button>
+                    </div>
+                    <div className="h-[480px] overflow-auto rounded bg-background p-3 border">
+                      <pre className="text-xs whitespace-pre-wrap font-code text-muted-foreground">
+                        <code>{generatedCode || testCase?.generatedCode}</code>
+                      </pre>
+                    </div>
+                  </div>
+                )}
+                </div>
             </DialogContent>
         </Dialog>
     );

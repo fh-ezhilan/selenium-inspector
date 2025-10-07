@@ -99,6 +99,7 @@ interface PagesContextType {
   addTestCase: (testCase: Omit<TestCase, "id">) => void;
   updateTestCase: (id: string, updates: Omit<TestCase, 'id'>) => void;
   deleteTestCase: (id: string) => void;
+  saveTestCaseCode: (id: string, code: string) => void;
 }
 
 const PagesContext = createContext<PagesContextType | undefined>(undefined);
@@ -238,6 +239,12 @@ export function PagesProvider({ children }: { children: ReactNode }) {
     )));
   }
 
+  const saveTestCaseCode = (id: string, code: string) => {
+    setTestCases(prev => prev.map(tc => (
+      tc.id === id ? { ...tc, generatedCode: code } : tc
+    )));
+  }
+
   const deleteTestCase = (id: string) => {
     setTestCases(prev => prev.filter(tc => tc.id !== id));
   }
@@ -262,6 +269,7 @@ export function PagesProvider({ children }: { children: ReactNode }) {
     addTestCase,
     updateTestCase,
     deleteTestCase,
+    saveTestCaseCode,
   };
 
   return <PagesContext.Provider value={value}>{children}</PagesContext.Provider>;

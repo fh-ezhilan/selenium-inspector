@@ -34,4 +34,5 @@ export interface TestCase {
   id:string;
   name: string;
   steps: TestCaseStep[];
+  generatedCode?: string;
 }
