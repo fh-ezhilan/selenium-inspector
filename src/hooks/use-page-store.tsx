@@ -232,11 +232,14 @@ export function PagesProvider({ children }: { children: ReactNode }) {
   }
 
   const updateTestCase = (id: string, updates: Omit<TestCase, 'id'>) => {
-    setTestCases(prev => prev.map(tc => (
-      tc.id === id
-        ? { id, ...updates }
-        : tc
-    )));
+    setTestCases(prev => prev.map(tc => {
+      if (tc.id !== id) return tc;
+      const merged: TestCase = { ...tc, ...updates, id } as TestCase;
+      if ((updates as Partial<TestCase>).generatedCode === undefined) {
+        merged.generatedCode = tc.generatedCode;
+      }
+      return merged;
+    }));
   }
 
   const saveTestCaseCode = (id: string, code: string) => {

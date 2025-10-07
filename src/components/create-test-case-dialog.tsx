@@ -182,7 +182,7 @@ export function CreateTestCaseDialog({ isOpen, setIsOpen, testCase }: CreateTest
 
     return (
         <Dialog open={isOpen} onOpenChange={(open) => { setIsOpen(open); if(!open){ setGeneratedCode(null); } }}>
-            <DialogContent className={cn("sm:max-w-[625px]", (generatedCode || testCase?.generatedCode) && "sm:max-w-[1100px]") }>
+            <DialogContent className="sm:max-w-[1100px]">
                 <DialogHeader>
                     <DialogTitle>{isEditMode ? "Edit Test Case" : "Create New Test Case"}</DialogTitle>
                     <DialogDescription>
@@ -192,9 +192,9 @@ export function CreateTestCaseDialog({ isOpen, setIsOpen, testCase }: CreateTest
                         }
                     </DialogDescription>
                 </DialogHeader>
-                <div className={cn("flex gap-6", generatedCode ? "flex-row" : "flex-col") }>
+                <div className="flex gap-6 flex-row">
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className={cn("space-y-6", generatedCode && "flex-1") }>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-1 basis-1/2 min-w-0">
                         <FormField
                             control={form.control}
                             name="name"
@@ -280,26 +280,28 @@ export function CreateTestCaseDialog({ isOpen, setIsOpen, testCase }: CreateTest
                         </DialogFooter>
                     </form>
                 </Form>
-                {(generatedCode || testCase?.generatedCode) && (
-                  <div className="flex-1 min-w-[420px] border rounded-md p-3 bg-muted/30">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-sm font-semibold">Generated Java Code</h3>
-                      <Button
-                        type="button"
-                        size="sm"
-                        variant="outline"
-                        onClick={() => { const code = generatedCode || testCase?.generatedCode || ""; if (code) { navigator.clipboard.writeText(code); toast({ title: "Copied", description: "Java code copied to clipboard."}); } }}
-                      >
-                        Copy Code
-                      </Button>
-                    </div>
-                    <div className="h-[480px] overflow-auto rounded bg-background p-3 border">
-                      <pre className="text-xs whitespace-pre-wrap font-code text-muted-foreground">
+                <div className="flex-1 basis-1/2 min-w-0 border rounded-md p-3 bg-muted/30">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-sm font-semibold">Generated Java Code</h3>
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="outline"
+                      onClick={() => { const code = generatedCode || testCase?.generatedCode || ""; if (code) { navigator.clipboard.writeText(code); toast({ title: "Copied", description: "Java code copied to clipboard."}); } }}
+                    >
+                      Copy Code
+                    </Button>
+                  </div>
+                  <div className="h-[480px] overflow-auto rounded bg-background p-3 border flex items-start">
+                    {generatedCode || testCase?.generatedCode ? (
+                      <pre className="text-xs whitespace-pre-wrap font-code text-muted-foreground w-full">
                         <code>{generatedCode || testCase?.generatedCode}</code>
                       </pre>
-                    </div>
+                    ) : (
+                      <div className="text-sm text-muted-foreground">No code yet. Click "Generate Method" to create it.</div>
+                    )}
                   </div>
-                )}
+                </div>
                 </div>
             </DialogContent>
         </Dialog>

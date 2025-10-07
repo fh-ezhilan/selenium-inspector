@@ -327,10 +327,18 @@ function PagesProvider({ children }) {
             ]);
     };
     const updateTestCase = (id, updates)=>{
-        setTestCases((prev)=>prev.map((tc)=>tc.id === id ? {
-                    id,
-                    ...updates
-                } : tc));
+        setTestCases((prev)=>prev.map((tc)=>{
+                if (tc.id !== id) return tc;
+                const merged = {
+                    ...tc,
+                    ...updates,
+                    id
+                };
+                if (updates.generatedCode === undefined) {
+                    merged.generatedCode = tc.generatedCode;
+                }
+                return merged;
+            }));
     };
     const saveTestCaseCode = (id, code)=>{
         setTestCases((prev)=>prev.map((tc)=>tc.id === id ? {
@@ -368,7 +376,7 @@ function PagesProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/hooks/use-page-store.tsx",
-        lineNumber: 275,
+        lineNumber: 278,
         columnNumber: 10
     }, this);
 }

@@ -858,6 +858,10 @@ body {
   flex-basis: 100%;
 }
 
+.basis-1\/2 {
+  flex-basis: 50%;
+}
+
 .caption-bottom {
   caption-side: bottom;
 }
