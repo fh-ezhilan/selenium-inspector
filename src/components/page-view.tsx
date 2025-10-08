@@ -249,16 +249,21 @@ export function PageView({ page }: PageViewProps) {
             <CardHeader>
               <CardTitle>Selenium Java Code</CardTitle>
               <CardDescription>
-                Here is the generated Java Page Object class. You can copy it or enhance it with AI.
+                Edit the generated Java Page Object class below. Changes are saved to this page.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="rounded-md bg-muted p-4 relative group/code">
-                <pre className="text-sm text-muted-foreground font-code whitespace-pre-wrap">
-                  <code>{fullCode}</code>
-                </pre>
-                <Button onClick={copyToClipboard} size="icon" variant="ghost" className="absolute top-2 right-2 opacity-0 transition-opacity group-hover/code:opacity-100">
-                    <Copy className="h-4 w-4" />
+              <div className="relative">
+                <Textarea
+                  rows={22}
+                  className="font-code text-sm whitespace-pre leading-5"
+                  value={fullCode}
+                  onChange={(e) => setFullCode(e.target.value)}
+                  onBlur={() => updatePageMethods(page.id, fullCode)}
+                />
+                <Button onClick={() => { updatePageMethods(page.id, fullCode); }} size="sm" variant="secondary" className="absolute top-2 right-24">Save</Button>
+                <Button onClick={copyToClipboard} size="sm" variant="outline" className="absolute top-2 right-2">
+                    <Copy className="h-4 w-4 mr-1" /> Copy
                 </Button>
               </div>
             </CardContent>
@@ -269,7 +274,7 @@ export function PageView({ page }: PageViewProps) {
                         <h3 className="text-lg font-semibold">Generate Methods with AI</h3>
                     </div>
                     <p className="text-sm text-muted-foreground mb-4">
-                        Describe a user interaction, and AI will add the corresponding Java methods to the class above.
+                        Describe a user interaction, and AI will add the corresponding Java methods into the editable code above.
                     </p>
                     <div className="space-y-4">
                         <Textarea

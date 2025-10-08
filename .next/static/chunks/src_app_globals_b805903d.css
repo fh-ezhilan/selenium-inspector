@@ -455,6 +455,10 @@ body {
   top: 50%;
 }
 
+.right-24 {
+  right: 6rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -551,6 +555,10 @@ body {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mr-1 {
+  margin-right: .25rem;
 }
 
 .block {
@@ -1087,6 +1095,10 @@ body {
   white-space: nowrap;
 }
 
+.whitespace-pre {
+  white-space: pre;
+}
+
 .whitespace-pre-wrap {
   white-space: pre-wrap;
 }
@@ -1508,6 +1520,10 @@ body {
 
 .leading-none {
   line-height: 1;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
 }
 
 .tracking-tight {

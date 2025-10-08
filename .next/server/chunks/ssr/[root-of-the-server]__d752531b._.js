@@ -2330,7 +2330,7 @@ function PageView({ page }) {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
-                                            children: "Here is the generated Java Page Object class. You can copy it or enhance it with AI."
+                                            children: "Edit the generated Java Page Object class below. Changes are saved to this page."
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/page-view.tsx",
                                             lineNumber: 251,
@@ -2344,37 +2344,50 @@ function PageView({ page }) {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "rounded-md bg-muted p-4 relative group/code",
+                                        className: "relative",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("pre", {
-                                                className: "text-sm text-muted-foreground font-code whitespace-pre-wrap",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("code", {
-                                                    children: fullCode
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/page-view.tsx",
-                                                    lineNumber: 258,
-                                                    columnNumber: 19
-                                                }, this)
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Textarea"], {
+                                                rows: 22,
+                                                className: "font-code text-sm whitespace-pre leading-5",
+                                                value: fullCode,
+                                                onChange: (e)=>setFullCode(e.target.value),
+                                                onBlur: ()=>updatePageMethods(page.id, fullCode)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/page-view.tsx",
                                                 lineNumber: 257,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                onClick: copyToClipboard,
-                                                size: "icon",
-                                                variant: "ghost",
-                                                className: "absolute top-2 right-2 opacity-0 transition-opacity group-hover/code:opacity-100",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$copy$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Copy$3e$__["Copy"], {
-                                                    className: "h-4 w-4"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/page-view.tsx",
-                                                    lineNumber: 261,
-                                                    columnNumber: 21
-                                                }, this)
+                                                onClick: ()=>{
+                                                    updatePageMethods(page.id, fullCode);
+                                                },
+                                                size: "sm",
+                                                variant: "secondary",
+                                                className: "absolute top-2 right-24",
+                                                children: "Save"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                lineNumber: 260,
+                                                lineNumber: 264,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                                onClick: copyToClipboard,
+                                                size: "sm",
+                                                variant: "outline",
+                                                className: "absolute top-2 right-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$copy$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Copy$3e$__["Copy"], {
+                                                        className: "h-4 w-4 mr-1"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/page-view.tsx",
+                                                        lineNumber: 266,
+                                                        columnNumber: 21
+                                                    }, this),
+                                                    " Copy"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/page-view.tsx",
+                                                lineNumber: 265,
                                                 columnNumber: 17
                                             }, this)
                                         ]
@@ -2399,7 +2412,7 @@ function PageView({ page }) {
                                                         className: "h-5 w-5 text-primary"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 268,
+                                                        lineNumber: 273,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2407,21 +2420,21 @@ function PageView({ page }) {
                                                         children: "Generate Methods with AI"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 269,
+                                                        lineNumber: 274,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                lineNumber: 267,
+                                                lineNumber: 272,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-sm text-muted-foreground mb-4",
-                                                children: "Describe a user interaction, and AI will add the corresponding Java methods to the class above."
+                                                children: "Describe a user interaction, and AI will add the corresponding Java methods into the editable code above."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                lineNumber: 271,
+                                                lineNumber: 276,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2435,7 +2448,7 @@ function PageView({ page }) {
                                                         disabled: isGenerating
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 275,
+                                                        lineNumber: 280,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2446,37 +2459,37 @@ function PageView({ page }) {
                                                                 className: "mr-2 h-4 w-4 animate-spin"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                                lineNumber: 283,
+                                                                lineNumber: 288,
                                                                 columnNumber: 45
                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
                                                                 className: "mr-2 h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                                lineNumber: 283,
+                                                                lineNumber: 288,
                                                                 columnNumber: 97
                                                             }, this),
                                                             isGenerating ? "Generating..." : "Generate & Add Methods"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 282,
+                                                        lineNumber: 287,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                lineNumber: 274,
+                                                lineNumber: 279,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/page-view.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 271,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/page-view.tsx",
-                                    lineNumber: 265,
+                                    lineNumber: 270,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -2501,20 +2514,20 @@ function PageView({ page }) {
                                             children: "Stored Page Source (HTML)"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/page-view.tsx",
-                                            lineNumber: 295,
+                                            lineNumber: 300,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
                                             children: "Paste the full HTML of this page and its canonical URL. They will auto-fill in the AI Locator dialog."
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/page-view.tsx",
-                                            lineNumber: 296,
+                                            lineNumber: 301,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/page-view.tsx",
-                                    lineNumber: 294,
+                                    lineNumber: 299,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -2529,7 +2542,7 @@ function PageView({ page }) {
                                                         children: "Page URL"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 303,
+                                                        lineNumber: 308,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -2538,13 +2551,13 @@ function PageView({ page }) {
                                                         onBlur: (e)=>updatePageUrl(page.id, e.currentTarget.value)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 304,
+                                                        lineNumber: 309,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                lineNumber: 302,
+                                                lineNumber: 307,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Textarea"], {
@@ -2554,7 +2567,7 @@ function PageView({ page }) {
                                                 onBlur: (e)=>updatePageSource(page.id, e.currentTarget.value)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                lineNumber: 310,
+                                                lineNumber: 315,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2562,29 +2575,29 @@ function PageView({ page }) {
                                                 children: "Tip: use Ctrl+U (Cmd+Opt+U on Mac) to view and copy a page’s source."
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                lineNumber: 316,
+                                                lineNumber: 321,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/page-view.tsx",
-                                        lineNumber: 301,
+                                        lineNumber: 306,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/page-view.tsx",
-                                    lineNumber: 300,
+                                    lineNumber: 305,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/page-view.tsx",
-                            lineNumber: 293,
+                            lineNumber: 298,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/page-view.tsx",
-                        lineNumber: 292,
+                        lineNumber: 297,
                         columnNumber: 9
                     }, this)
                 ]
@@ -2604,20 +2617,20 @@ function PageView({ page }) {
                                     children: editingLocator ? "Edit Locator" : "Add New Locator"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/page-view.tsx",
-                                    lineNumber: 326,
+                                    lineNumber: 331,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogDescription"], {
                                     children: "Provide the details for your element locator."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/page-view.tsx",
-                                    lineNumber: 327,
+                                    lineNumber: 332,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/page-view.tsx",
-                            lineNumber: 325,
+                            lineNumber: 330,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Form"], {
@@ -2635,7 +2648,7 @@ function PageView({ page }) {
                                                         children: "Locator Name"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 338,
+                                                        lineNumber: 343,
                                                         columnNumber: 21
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -2644,28 +2657,28 @@ function PageView({ page }) {
                                                             ...field
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/page-view.tsx",
-                                                            lineNumber: 340,
+                                                            lineNumber: 345,
                                                             columnNumber: 23
                                                         }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 339,
+                                                        lineNumber: 344,
                                                         columnNumber: 21
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 342,
+                                                        lineNumber: 347,
                                                         columnNumber: 21
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                lineNumber: 337,
+                                                lineNumber: 342,
                                                 columnNumber: 19
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/page-view.tsx",
-                                        lineNumber: 333,
+                                        lineNumber: 338,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormField"], {
@@ -2677,7 +2690,7 @@ function PageView({ page }) {
                                                         children: "Locator Type"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 351,
+                                                        lineNumber: 356,
                                                         columnNumber: 21
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -2690,17 +2703,17 @@ function PageView({ page }) {
                                                                         placeholder: "Select a locator type"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                                        lineNumber: 355,
+                                                                        lineNumber: 360,
                                                                         columnNumber: 27
                                                                     }, void 0)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/page-view.tsx",
-                                                                    lineNumber: 354,
+                                                                    lineNumber: 359,
                                                                     columnNumber: 25
                                                                 }, void 0)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                                lineNumber: 353,
+                                                                lineNumber: 358,
                                                                 columnNumber: 23
                                                             }, void 0),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -2709,34 +2722,34 @@ function PageView({ page }) {
                                                                         children: type
                                                                     }, type, false, {
                                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                                        lineNumber: 360,
+                                                                        lineNumber: 365,
                                                                         columnNumber: 29
                                                                     }, void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                                lineNumber: 358,
+                                                                lineNumber: 363,
                                                                 columnNumber: 23
                                                             }, void 0)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 352,
+                                                        lineNumber: 357,
                                                         columnNumber: 21
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 364,
+                                                        lineNumber: 369,
                                                         columnNumber: 21
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                lineNumber: 350,
+                                                lineNumber: 355,
                                                 columnNumber: 19
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/page-view.tsx",
-                                        lineNumber: 346,
+                                        lineNumber: 351,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormField"], {
@@ -2748,7 +2761,7 @@ function PageView({ page }) {
                                                         children: "Locator Value"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 373,
+                                                        lineNumber: 378,
                                                         columnNumber: 21
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -2757,28 +2770,28 @@ function PageView({ page }) {
                                                             ...field
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/page-view.tsx",
-                                                            lineNumber: 375,
+                                                            lineNumber: 380,
                                                             columnNumber: 23
                                                         }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 374,
+                                                        lineNumber: 379,
                                                         columnNumber: 21
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/page-view.tsx",
-                                                        lineNumber: 377,
+                                                        lineNumber: 382,
                                                         columnNumber: 21
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/page-view.tsx",
-                                                lineNumber: 372,
+                                                lineNumber: 377,
                                                 columnNumber: 19
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/page-view.tsx",
-                                        lineNumber: 368,
+                                        lineNumber: 373,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogFooter"], {
@@ -2787,34 +2800,34 @@ function PageView({ page }) {
                                             children: "Save"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/page-view.tsx",
-                                            lineNumber: 382,
+                                            lineNumber: 387,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/page-view.tsx",
-                                        lineNumber: 381,
+                                        lineNumber: 386,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/page-view.tsx",
-                                lineNumber: 332,
+                                lineNumber: 337,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/page-view.tsx",
-                            lineNumber: 331,
+                            lineNumber: 336,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/page-view.tsx",
-                    lineNumber: 324,
+                    lineNumber: 329,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/page-view.tsx",
-                lineNumber: 323,
+                lineNumber: 328,
                 columnNumber: 7
             }, this)
         ]
